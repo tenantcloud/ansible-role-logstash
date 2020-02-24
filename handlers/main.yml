@@ -1,3 +1,6 @@
 ---
 - name: restart logstash
   service: name=logstash state=restarted
+
+- name: Stop logstash
+  service: name=logstash state=stopped

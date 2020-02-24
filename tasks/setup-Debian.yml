@@ -26,8 +26,9 @@
 
 - name: Install Logstash.
   apt:
-    name: logstash
-    state: present
+    name: "logstash={{ release_version }}"
+  notify:
+    - Stop logstash
 
 - name: Add Logstash user to adm group (Debian).
   user:
