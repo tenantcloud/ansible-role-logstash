@@ -29,6 +29,7 @@
     name: "logstash={{ release_version }}"
   notify:
     - Stop logstash
+  ignore_errors: true
 
 - name: Add Logstash user to adm group (Debian).
   user:
